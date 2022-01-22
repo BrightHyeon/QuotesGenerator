@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tabQuoteMaker(_ sender: Any) {
-        let random = Int(arc4random_uniform(4))
+        let random = Int(arc4random_uniform(UInt32(self.quotes.count)))
         let quote = quotes[random]
         self.quoteLabel.text = quote.contents
         self.nameLabel.text = quote.name
